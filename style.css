@@ -1,0 +1,116 @@
+body {
+  font-family: 'Garamond', serif;
+  background-color: #f5f5dc;
+  color: #3c3c3b;
+  margin: 0;
+}
+
+header {
+  background-color: #6b8e23;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 3em;
+  text-shadow: 2px 2px #556b2f;
+}
+
+main {
+  padding: 20px;
+  text-align: center;
+}
+
+.canvas-container {
+  position: relative;
+  width: 56.25%;
+  padding-top: 100%;
+  margin: 30px auto;
+  background-color: #fff;
+  overflow: hidden;
+  border: 5px solid #6b8e23;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.canvas-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#randomize-button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  margin: 20px auto;
+  cursor: pointer;
+  border: none;
+  background-color: #6b8e23;
+  color: #fff;
+  border-radius: 5px;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+#randomize-button:hover {
+  background-color: #556b2f;
+  transform: scale(1.05);
+}
+
+#about-gnomecoin {
+  margin: 40px auto;
+  max-width: 800px;
+  text-align: left;
+}
+
+#about-gnomecoin h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+#about-gnomecoin p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+footer {
+  background-color: #6b8e23;
+  padding: 20px;
+  text-align: center;
+}
+
+#social-media {
+  margin: 20px 0;
+}
+
+.gnome-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  background-color: #8fbc8f;
+  color: #fff;
+  border-radius: 10px;
+  transition: background-color 0.2s, transform 0.2s;
+  font-family: 'Garamond', serif;
+}
+
+.gnome-button:hover {
+  background-color: #556b2f;
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  #randomize-button {
+    font-size: 1em;
+  }
+}
