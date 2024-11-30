@@ -1,7 +1,7 @@
 // Array of image paths
 let images = [];
 for (let i = 1; i <= 14; i++) {
-  images.push(`images/gnome_house${i}.png`);
+  images.push(`gnome_house${i}.png`);
 }
 
 // Event listener for the button
