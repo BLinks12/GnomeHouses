@@ -1,12 +1,12 @@
 body {
   font-family: 'Garamond', serif;
-  background-color: #f5f5dc;
-  color: #3c3c3b;
+  background-color: #f5f5dc; /* Beige background */
+  color: #3c3c3b; /* Dark gray text */
   margin: 0;
 }
 
 header {
-  background-color: #6b8e23;
+  background-color: #6b8e23; /* Olive green */
   padding: 20px;
   text-align: center;
 }
@@ -15,7 +15,7 @@ header h1 {
   color: #fff;
   margin: 0;
   font-size: 3em;
-  text-shadow: 2px 2px #556b2f;
+  text-shadow: 2px 2px #556b2f; /* Dark olive */
 }
 
 main {
@@ -61,18 +61,21 @@ main {
   transform: scale(1.05);
 }
 
-#about-gnomecoin {
+#how-it-works,
+#gnome-lore {
   margin: 40px auto;
   max-width: 800px;
   text-align: left;
 }
 
-#about-gnomecoin h2 {
+#how-it-works h2,
+#gnome-lore h2 {
   font-size: 2em;
   margin-bottom: 10px;
 }
 
-#about-gnomecoin p {
+#how-it-works p,
+#gnome-lore p {
   font-size: 1.2em;
   line-height: 1.6;
 }
@@ -93,7 +96,7 @@ footer {
   margin: 10px;
   cursor: pointer;
   border: none;
-  background-color: #8fbc8f;
+  background-color: #8fbc8f; /* Dark sea green */
   color: #fff;
   border-radius: 10px;
   transition: background-color 0.2s, transform 0.2s;
@@ -114,4 +117,3 @@ footer {
     font-size: 1em;
   }
 }
-
