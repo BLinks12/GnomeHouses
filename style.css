@@ -1,111 +1,127 @@
+/* Apply a grainy background to match the images' aesthetic */
 body {
-  font-family: 'Garamond', serif;
-  background-color: #f5f5dc; /* Beige background */
-  color: #3c3c3b; /* Dark gray text */
+  font-family: 'Courier New', monospace; /* Retro look */
+  background-color: #fdf4dc; /* Light beige background to match the image tones */
+  background-image: url('data:image/png;base64,iVBORw...'); /* Add a subtle grain texture */
+  color: #4a3826; /* Muted brown for text */
   margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
+/* Header with vintage-style font */
 header {
-  background-color: #6b8e23; /* Olive green */
+  background-color: #ba944a; /* Warm gold */
   padding: 20px;
-  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
-  color: #fff;
+  color: #fff8e1; /* Creamy white */
   margin: 0;
-  font-size: 3em;
-  text-shadow: 2px 2px #556b2f; /* Dark olive */
+  font-size: 3.5em;
+  letter-spacing: 0.1em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  text-transform: uppercase;
 }
 
+/* Main container */
 main {
   padding: 20px;
-  text-align: center;
 }
 
+/* Canvas with smaller dimensions */
 .canvas-container {
   position: relative;
-  width: 56.25%; /* 9:16 aspect ratio */
-  padding-top: 100%; /* For responsive aspect ratio */
-  margin: 30px auto;
-  background-color: #fff;
-  overflow: hidden;
-  border: 5px solid #6b8e23;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 80%; /* Adjusted to make it smaller */
+  max-width: 500px; /* Reduced max-width for a smaller canvas */
+  margin: 20px auto; /* Adjusted margin for spacing */
+  background-color: #f9f3e6; /* Off-white */
+  border: 5px solid #8d7449; /* Dark brown */
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .canvas-content {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  border-radius: 15px;
 }
 
+/* Retro-style button */
 #randomize-button {
+  display: block;
+  margin: 20px auto;
   padding: 15px 30px;
   font-size: 1.2em;
-  margin: 20px auto;
+  font-family: 'Courier New', monospace;
+  background-color: #ba944a; /* Golden brown */
+  color: #fff8e1; /* Creamy white */
+  border: 3px solid #8d7449; /* Dark brown */
+  border-radius: 10px;
   cursor: pointer;
-  border: none;
-  background-color: #6b8e23;
-  color: #fff;
-  border-radius: 5px;
-  transition: background-color 0.2s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #randomize-button:hover {
-  background-color: #556b2f;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
-#how-it-works,
-#gnome-lore {
+/* Sections with retro design */
+section {
   margin: 40px auto;
-  max-width: 800px;
-  text-align: left;
-}
-
-#how-it-works h2,
-#gnome-lore h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-#how-it-works p,
-#gnome-lore p {
-  font-size: 1.2em;
-  line-height: 1.6;
-}
-
-footer {
-  background-color: #6b8e23;
   padding: 20px;
-  text-align: center;
+  max-width: 700px; /* Reduced width */
+  background-color: #fff8e1; /* Creamy white */
+  border-radius: 15px;
+  border: 3px dashed #ba944a; /* Retro dashed border */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-#social-media {
-  margin: 20px 0;
+section h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #4a3826;
+  text-transform: uppercase;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+section p {
+  font-size: 1.2em;
+  line-height: 1.8;
+  color: #4a3826;
+}
+
+/* Footer with vintage buttons */
+footer {
+  background-color: #ba944a; /* Golden brown */
+  padding: 20px;
+  box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer #social-media {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
 .gnome-button {
-  padding: 10px 20px;
   font-size: 1em;
-  margin: 10px;
-  cursor: pointer;
-  border: none;
-  background-color: #8fbc8f; /* Dark sea green */
-  color: #fff;
+  padding: 10px 20px;
+  font-family: 'Courier New', monospace;
+  background-color: #8d7449; /* Dark brown */
+  color: #fff8e1; /* Creamy white */
+  border: 2px solid #ba944a; /* Golden brown */
   border-radius: 10px;
-  transition: background-color 0.2s, transform 0.2s;
-  font-family: 'Garamond', serif;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .gnome-button:hover {
-  background-color: #556b2f;
-  transform: scale(1.05);
+  background-color: #ba944a;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 768px) {
@@ -114,6 +130,14 @@ footer {
   }
 
   #randomize-button {
+    font-size: 1em;
+  }
+
+  section h2 {
+    font-size: 1.8em;
+  }
+
+  section p {
     font-size: 1em;
   }
 }
