@@ -2,7 +2,8 @@
 body {
   font-family: 'Courier New', monospace; /* Retro look */
   background-color: #fdf4dc; /* Light beige background to match the image tones */
-  background-image: url('data:image/png;base64,iVBORw...'); /* Add a subtle grain texture */
+  background-image: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1%, rgba(0, 0, 0, 0) 2%);
+  background-size: 8px 8px; /* Halftone effect */
   color: #4a3826; /* Muted brown for text */
   margin: 0;
   padding: 0;
@@ -19,7 +20,7 @@ header {
 header h1 {
   color: #fff8e1; /* Creamy white */
   margin: 0;
-  font-size: 3.5em;
+  font-size: 3em;
   letter-spacing: 0.1em;
   text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3); /* Subtle shadow */
   text-transform: uppercase;
@@ -30,58 +31,60 @@ main {
   padding: 20px;
 }
 
-/* Canvas with smaller dimensions */
+/* Canvas with smaller dimensions, proportional scaling */
 .canvas-container {
   position: relative;
-  width: 80%; /* Adjusted to make it smaller */
-  max-width: 500px; /* Reduced max-width for a smaller canvas */
-  margin: 20px auto; /* Adjusted margin for spacing */
+  width: 70%; /* Reduced width */
+  max-width: 400px; /* Smaller maximum width */
+  aspect-ratio: 4 / 3; /* Proportional height adjustment */
+  margin: 20px auto;
   background-color: #f9f3e6; /* Off-white */
-  border: 5px solid #8d7449; /* Dark brown */
-  border-radius: 20px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  border: 4px solid #8d7449; /* Dark brown */
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
 }
 
 .canvas-content {
   width: 100%;
-  height: auto;
-  border-radius: 15px;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
 }
 
 /* Retro-style button */
 #randomize-button {
   display: block;
   margin: 20px auto;
-  padding: 15px 30px;
+  padding: 12px 24px;
   font-size: 1.2em;
   font-family: 'Courier New', monospace;
   background-color: #ba944a; /* Golden brown */
   color: #fff8e1; /* Creamy white */
   border: 3px solid #8d7449; /* Dark brown */
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #randomize-button:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
 }
 
 /* Sections with retro design */
 section {
-  margin: 40px auto;
-  padding: 20px;
+  margin: 30px auto;
+  padding: 15px;
   max-width: 700px; /* Reduced width */
   background-color: #fff8e1; /* Creamy white */
-  border-radius: 15px;
+  border-radius: 12px;
   border: 3px dashed #ba944a; /* Retro dashed border */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
 section h2 {
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 10px;
   color: #4a3826;
   text-transform: uppercase;
@@ -89,44 +92,50 @@ section h2 {
 }
 
 section p {
-  font-size: 1.2em;
-  line-height: 1.8;
+  font-size: 1.1em;
+  line-height: 1.6;
   color: #4a3826;
 }
 
 /* Footer with vintage buttons */
 footer {
   background-color: #ba944a; /* Golden brown */
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
 }
 
 footer #social-media {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 .gnome-button {
   font-size: 1em;
-  padding: 10px 20px;
+  padding: 10px 18px;
   font-family: 'Courier New', monospace;
   background-color: #8d7449; /* Dark brown */
   color: #fff8e1; /* Creamy white */
   border: 2px solid #ba944a; /* Golden brown */
-  border-radius: 10px;
+  border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .gnome-button:hover {
   background-color: #ba944a;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
+/* Responsive design */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2em;
+  }
+
+  .canvas-container {
+    width: 90%;
+    max-width: 320px;
   }
 
   #randomize-button {
@@ -134,7 +143,7 @@ footer #social-media {
   }
 
   section h2 {
-    font-size: 1.8em;
+    font-size: 1.6em;
   }
 
   section p {
