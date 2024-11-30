@@ -12,7 +12,7 @@ function displayRandomImage() {
   let randomIndex = Math.floor(Math.random() * images.length);
   document.getElementById('canvas-image').src = images[randomIndex];
 }
-
+ 
 // Initial random image on page load
 window.onload = function() {
   displayRandomImage();
