@@ -37,6 +37,15 @@
         The gnomes have long awaited human partners to help grow their magical villages. With every holders milestone, new homes emerge from the forest, showcasing the artistry and charm of the gnome realm. 🏡✨
       </p>
     </section>
+
+    <section id="contract-address">
+      <h2>Contract Address</h2>
+      <p class="contract-address">
+        📜 **GnomeCoin Contract Address:**  
+        <span id="contract">GT9k7ZmFtXcTZ1DgftVu5VVDEDc9nsDusfASSWcspump</span>
+      </p>
+      <button id="copy-contract" onclick="copyToClipboard()">Copy Address</button>
+    </section>
   </main>
 
   <footer>
@@ -46,6 +55,13 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    function copyToClipboard() {
+      const contractAddress = document.getElementById('contract').textContent;
+      navigator.clipboard.writeText(contractAddress).then(() => {
+        alert('Contract Address copied to clipboard!');
+      });
+    }
+  </script>
 </body>
 </html>
