@@ -37,19 +37,22 @@ main {
   width: 50%; /* Reduced width */
   max-width: 400px; /* Smaller maximum width */
   aspect-ratio: 9 / 16; /* Correct 9:16 aspect ratio */
-  margin: 20px auto; /* Centered */
+  margin: 20px auto;
   background-color: #f9f3e6; /* Off-white */
   border: 4px solid #8d7449; /* Dark brown */
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-  overflow: hidden; /* Prevents blank space or overflow issues */
+  display: flex;
+  align-items: center; /* Vertically aligns content */
+  justify-content: center; /* Horizontally aligns content */
+  overflow: hidden; /* Prevents any overflow */
 }
 
 .canvas-content {
   width: 100%;
   height: 100%;
   object-fit: cover; /* Ensures the image fits perfectly */
-  border-radius: 12px;
+  display: block; /* Removes any inline block spacing */
 }
 
 /* Retro-style button */
