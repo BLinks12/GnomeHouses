@@ -1,7 +1,7 @@
 /* Apply a grainy background to match the images' aesthetic */
 body {
   font-family: 'Courier New', monospace; /* Retro look */
-  background-color: #fdf4dc; /* Light beige background to match the image tones */
+  background-color: #fdf4dc; /* Light beige background */
   background-image: radial-gradient(circle, rgba(0, 0, 0, 0.02) 1%, rgba(0, 0, 0, 0) 2%);
   background-size: 8px 8px; /* Halftone effect */
   color: #4a3826; /* Muted brown for text */
@@ -10,11 +10,12 @@ body {
   text-align: center;
 }
 
-/* Header with vintage-style font */
+/* Header with magical, whimsical font */
 header {
   background-color: #ba944a; /* Warm gold */
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
 }
 
 header h1 {
@@ -26,6 +27,15 @@ header h1 {
   text-transform: uppercase;
 }
 
+/* Add a whimsical gnome hat to the header */
+header::after {
+  content: '🧙';
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 2em;
+}
+
 /* Main container */
 main {
   padding: 20px;
@@ -34,38 +44,37 @@ main {
 /* Canvas with 9:16 aspect ratio */
 .canvas-container {
   position: relative;
-  width: 50%; /* Reduced width */
-  max-width: 400px; /* Smaller maximum width */
-  aspect-ratio: 9 / 16; /* Correct 9:16 aspect ratio */
+  width: 60%; /* Slightly larger */
+  max-width: 450px; /* Adjusted max-width */
+  aspect-ratio: 9 / 16; /* Maintain 9:16 aspect ratio */
   margin: 20px auto;
   background-color: #f9f3e6; /* Off-white */
-  border: 4px solid #8d7449; /* Dark brown */
+  border: 6px solid #8d7449; /* Dark brown */
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
   display: flex;
-  align-items: center; /* Vertically aligns content */
-  justify-content: center; /* Horizontally aligns content */
-  overflow: hidden; /* Prevents any overflow */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  overflow: hidden; /* Prevent overflow issues */
 }
 
 .canvas-content {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ensures the image fits perfectly */
-  display: block; /* Removes any inline block spacing */
+  width: 105%; /* Slightly larger than container to fill any blank space */
+  height: 105%;
+  object-fit: cover; /* Ensures the image fills the container */
 }
 
 /* Retro-style button */
 #randomize-button {
   display: block;
   margin: 20px auto;
-  padding: 12px 24px;
+  padding: 15px 30px;
   font-size: 1.2em;
   font-family: 'Courier New', monospace;
   background-color: #ba944a; /* Golden brown */
   color: #fff8e1; /* Creamy white */
-  border: 3px solid #8d7449; /* Dark brown */
-  border-radius: 8px;
+  border: 4px solid #8d7449; /* Dark brown */
+  border-radius: 10px;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -80,11 +89,21 @@ main {
 section {
   margin: 30px auto;
   padding: 15px;
-  max-width: 700px; /* Reduced width */
+  max-width: 700px;
   background-color: #fff8e1; /* Creamy white */
   border-radius: 12px;
   border: 3px dashed #ba944a; /* Retro dashed border */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+/* Add gnome icons to sections */
+section::before {
+  content: '🪓🌲';
+  position: absolute;
+  top: -20px;
+  left: 10px;
+  font-size: 1.5em;
 }
 
 section h2 {
@@ -106,6 +125,15 @@ footer {
   background-color: #ba944a; /* Golden brown */
   padding: 15px;
   box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+
+footer::after {
+  content: '🍄🧝';
+  position: absolute;
+  top: -20px;
+  right: 10px;
+  font-size: 1.5em;
 }
 
 footer #social-media {
@@ -139,7 +167,7 @@ footer #social-media {
 
   .canvas-container {
     width: 80%; /* Scales proportionally */
-    max-width: 300px;
+    max-width: 320px;
   }
 
   #randomize-button {
