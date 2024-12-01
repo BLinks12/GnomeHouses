@@ -31,23 +31,24 @@ main {
   padding: 20px;
 }
 
-/* Canvas with smaller dimensions, proportional scaling */
+/* Canvas with 9:16 aspect ratio */
 .canvas-container {
   position: relative;
-  width: 70%; /* Reduced width */
+  width: 50%; /* Reduced width */
   max-width: 400px; /* Smaller maximum width */
-  aspect-ratio: 4 / 3; /* Proportional height adjustment */
-  margin: 20px auto;
+  aspect-ratio: 9 / 16; /* Correct 9:16 aspect ratio */
+  margin: 20px auto; /* Centered */
   background-color: #f9f3e6; /* Off-white */
   border: 4px solid #8d7449; /* Dark brown */
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden; /* Prevents blank space or overflow issues */
 }
 
 .canvas-content {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures the image fits perfectly */
   border-radius: 12px;
 }
 
@@ -134,8 +135,8 @@ footer #social-media {
   }
 
   .canvas-container {
-    width: 90%;
-    max-width: 320px;
+    width: 80%; /* Scales proportionally */
+    max-width: 300px;
   }
 
   #randomize-button {
